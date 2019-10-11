@@ -5,9 +5,9 @@ In order to run this project, you need:
 - Python v3.5+
 - ChromeDriver (You can get this driver for your operating system from the [Chromium](https://chromedriver.chromium.org/downloads) website)
 
+Now you can run this project by adding the desired likns to `urls` list, and setting the time interval by editing `start_time` and `end_time` in [`main.py`](./main.py).
+
 then run:
 ```bash
 pip install -r requirements.txt
 ```
-
-Now you can run this project by entering the desired likns in the `urls` list in `main.py`. 
