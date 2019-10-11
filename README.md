@@ -1,5 +1,5 @@
 # Simple Dynamic Crawler
-This project is a simple crawler for extracting some the price of some stocks from [TGJU](http://www.tgju.org) webiste.
+This project is a simple crawler for extracting the price of some stocks from [TGJU](http://www.tgju.org) webiste.
 
 In order to run this project, you need:
 - Python v3.5+
