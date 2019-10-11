@@ -1,0 +1,9 @@
+# directories
+venv
+.DS_Store
+.idea
+__pycache__
+
+# files
+chromedriver
+
