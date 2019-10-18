@@ -10,7 +10,7 @@ end_date = '1398-07-23'
 
 file_name = start_date + 'to' + end_date
 cur_dir = path.dirname(__file__)
-out_dir = path.join(cur_dir, '../out')  # For saving the outpput in the out folder in the rot
+out_dir = path.join(cur_dir, '../out')  # For saving the outpput in the out folder in the root
 
 if __name__ == '__main__':
     browser = webdriver.Chrome('./chromedriver')
