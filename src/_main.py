@@ -32,9 +32,10 @@ if __name__ == '__main__':
         prices[url] = crawl(urls[url], browser, start_date, end_date)
         print('Fetching done\n')
 
+    browser.quit()
+    
     with open(path.join(out_dir, file_name + '.txt'), 'wt') as f:
         f.write(str(prices))
 
     generate_sheet(prices, path.join(out_dir, file_name + '.xlsx'))
 
-    browser.quit()
