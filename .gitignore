@@ -1,5 +1,7 @@
 # directories
 venv
+out
+.vscode
 .DS_Store
 .idea
 __pycache__
