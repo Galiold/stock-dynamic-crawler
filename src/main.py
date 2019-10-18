@@ -1,12 +1,16 @@
 from selenium import webdriver
 from crawler import crawl
 from spreadsheet import generate_sheet
+import os.path as path
 
 
 prices = {}
-start_date = '1398-07-10'
-end_date = '1398-07-18'
+start_date = '1398-07-01'
+end_date = '1398-07-23'
+
 file_name = start_date + 'to' + end_date
+cur_dir = path.dirname(__file__)
+out_dir = path.join(cur_dir, '../out')  # For saving the outpput in the out folder in the rot
 
 if __name__ == '__main__':
     browser = webdriver.Chrome('./chromedriver')
@@ -26,11 +30,11 @@ if __name__ == '__main__':
     for url in urls:
         print('Fetching %s...' % urls[url])
         prices[url] = crawl(urls[url], browser, start_date, end_date)
-        print('Fetching %s done' % urls[url])
+        print('Fetching done\n')
 
-    with open(file_name + '.txt', 'wt') as f:
+    with open(path.join(out_dir, file_name + '.txt'), 'wt') as f:
         f.write(str(prices))
 
-    generate_sheet(prices, file_name + '.xlsx')
+    generate_sheet(prices, path.join(out_dir, file_name + '.xlsx'))
 
     browser.quit()
