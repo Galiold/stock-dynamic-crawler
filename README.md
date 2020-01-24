@@ -10,4 +10,4 @@ then run:
 pip install -r requirements.txt
 ```
 
-Now you can run this project by adding the desired likns to `urls` list, and setting the time interval by editing `start_time` and `end_time` in [`main.py`](./main.py).
+Now you can run this project by adding the desired links to `urls` list, and setting the time interval by editing `start_time` and `end_time` in [`main.py`](./main.py).
